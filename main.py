@@ -1,4 +1,5 @@
-import Module1 
+import Items 
+import Enteties
 import ObserverPattern_Test
 import Decorator
 
@@ -7,11 +8,14 @@ from datetime import datetime
 now = datetime.now()
 DEBUG = 1
 
+def Test():
+    print("welcome to Test")
+
 def main():
     print("Hello new Start "+ str(now))
 
-    Mino = Module1.Human("Minoda", 50, DEBUG)
-    Test = Module1.Creature("testvieh", 50, DEBUG)
+    Mino = Enteties.Human("Minoda", 50, DEBUG)
+    Test = Enteties.Creature("testvieh", 50, DEBUG)
 
     Test.AddExp(200)
     Mino.AddExp(20)
@@ -23,7 +27,8 @@ def main():
     #Test.Show()
     Mino.Show()
 
-
+    
 
 if __name__ == '__main__':
-    main()
+    Test()
+    #main()
