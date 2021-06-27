@@ -1,6 +1,6 @@
 import Items 
 import Enteties
-import ObserverPattern_Test
+import Observer
 import Decorator
 
 from datetime import datetime
@@ -8,8 +8,28 @@ from datetime import datetime
 now = datetime.now()
 DEBUG = 1
 
-def Test():
-    print("welcome to Test")
+
+def ObserverTest():
+    pass
+
+
+def DecoratorTest():
+    print("welcome to Decorator")
+
+    MeinePizza = Decorator.PizzaBoden()
+
+    simple = Decorator.ConcreteComponent()
+    print("Client: i have a component")
+    Decorator.ClientCode(simple)
+    print("\n")
+
+    decorator1 = Decorator.ConcreteDecoratorA(simple)
+    decorator2 = Decorator.ConcreteDecoratorB(decorator1)
+
+    print("Client is decorated")
+
+    Decorator.ClientCode(decorator2)
+
 
 def main():
     print("Hello new Start "+ str(now))
@@ -30,5 +50,6 @@ def main():
     
 
 if __name__ == '__main__':
-    #Test()
+    #DecoratorTest()
     main()
+    #ObserverTest()
