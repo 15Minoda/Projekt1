@@ -72,14 +72,14 @@ class Belag(Pizza):
 
 class ExtraSalami(Belag):
     def ExtraBelag(self) -> str:
-        return super().ExtraBelag() + "+ Extra Salami"
+        return super().ExtraBelag() + " + Extra Salami"
 
     def ExtraPreis(self) -> int:
         return super().ExtraPreis() + 1
 
-class ExtraCheese(Pizza):
+class ExtraCheese(Belag):
     def ExtraBelag(self) -> str:
-        return super().ExtraBelag() + "+ Extra Kase"
+        return super().ExtraBelag() + " + Extra Kase"
 
     def ExtraPreis(self) -> int:
         return super().ExtraPreis() + 2

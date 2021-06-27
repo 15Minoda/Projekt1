@@ -17,18 +17,33 @@ def DecoratorTest():
     print("welcome to Decorator")
 
     MeinePizza = Decorator.PizzaBoden()
+    print(f"meine Pizza  {MeinePizza.ExtraBelag()}")
 
-    simple = Decorator.ConcreteComponent()
-    print("Client: i have a component")
-    Decorator.ClientCode(simple)
-    print("\n")
+    KasePizza = Decorator.ExtraCheese(MeinePizza)
 
-    decorator1 = Decorator.ConcreteDecoratorA(simple)
-    decorator2 = Decorator.ConcreteDecoratorB(decorator1)
+    print(f"Meine neue Pizza  {KasePizza.ExtraBelag()}")
 
-    print("Client is decorated")
+    SalamiKasePizza = Decorator.ExtraSalami(KasePizza)
 
-    Decorator.ClientCode(decorator2)
+    print(f"Meine neue Pitta {SalamiKasePizza.ExtraBelag()}")
+    
+   # print("Meine neue Pitta "+ str(SalamiKasePizza.ExtraPreis()))
+
+    SalamiKasePizza = Decorator.ExtraSalami(SalamiKasePizza)
+
+    print(f"Meine neue Pizza {SalamiKasePizza.ExtraBelag()}")
+
+    # simple = Decorator.ConcreteComponent()
+    # print("Client: i have a component")
+    # Decorator.ClientCode(simple)
+    # print("\n")
+
+    # decorator1 = Decorator.ConcreteDecoratorA(simple)
+    # decorator2 = Decorator.ConcreteDecoratorB(decorator1)
+
+    # print("Client is decorated")
+
+    # Decorator.ClientCode(decorator2)
 
 
 def main():
@@ -50,6 +65,6 @@ def main():
     
 
 if __name__ == '__main__':
-    #DecoratorTest()
-    main()
+    DecoratorTest()
+    #main()
     #ObserverTest()
