@@ -15,9 +15,9 @@ def main():
     print("Hello new Start "+ str(now))
 
     Mino = Enteties.Human("Minoda", 50, DEBUG)
-    Test = Enteties.Creature("testvieh", 50, DEBUG)
+    #Test = Enteties.Creature("testvieh", 50, DEBUG)
 
-    Test.AddExp(200)
+    #Test.AddExp(200)
     Mino.AddExp(20)
     Mino.AddExp(80)
     Mino.SubHP(18)
@@ -30,5 +30,5 @@ def main():
     
 
 if __name__ == '__main__':
-    Test()
-    #main()
+    #Test()
+    main()

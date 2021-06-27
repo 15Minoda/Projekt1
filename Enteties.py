@@ -1,4 +1,5 @@
 class LivingThing():
+    """Main Class for all Livingthings  humans, creatures usw"""
     __actHP   = 0
     __nextExp = 0
     actionCounter = 0
@@ -18,7 +19,7 @@ class LivingThing():
         print("Was Created!")
         print("##############################################")
 
-    def NewAction(self):
+    def NewAction(self): ## for debugging
         if self.debug > 0:
             LivingThing.actionCounter+=1
             print("--------------------Action_"+str(LivingThing.actionCounter))
@@ -70,6 +71,21 @@ class LivingThing():
             #self.ReturnExpOnDeath()
             self.Death()
     
+class CharStats():
+    """Main Class for all Stats of an Charakter or Entity"""
+    __Str = 0       #Strength
+    __Dex = 0       #Aggility
+    __Mackiga = 0   #magicka
+    __resMeele = 0  #Meele Resistance
+    __resRange = 0  #Range Resistance
+    __resMage = 0   #Mage Resistance
+    __resFire = 0   #Fire Resistance
+    
+    def __init__(self) -> None:
+        pass
+ 
+    
+    
 
 class Human(LivingThing):
     #__level   = 0
@@ -117,3 +133,5 @@ class Human(LivingThing):
 class Creature(LivingThing):
     def __init__(self, name, maxHP, debug):
         super().__init__(name, maxHP, debug=debug)
+
+        
